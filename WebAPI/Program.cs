@@ -30,6 +30,6 @@ app.UseSwagger();
 
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sample API");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sample API Example");
 });
 app.Run();
