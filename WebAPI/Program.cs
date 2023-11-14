@@ -7,12 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
 // Add services to the container.
 builder.Services.AddControllers();
-//builder.Services.AddSqlServer<ApplicationDbContext>(connectionString);
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
-
-//builder.Services.AddDbContext<ApplicationDbContext>(options =>
-//options.UseSqlServer(connectionString)
-//);
 
 //swagger
 builder.Services.AddEndpointsApiExplorer();

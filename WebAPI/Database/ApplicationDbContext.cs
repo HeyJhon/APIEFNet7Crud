@@ -13,7 +13,7 @@ namespace WebAPI.Database
         public DbSet<Sale> Sales{ get; set; }
         public DbSet<SaleDetail> SaleDetails { get; set; }
         public DbSet<Seller> Sellers { get; set; }
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options){}    
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options){}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

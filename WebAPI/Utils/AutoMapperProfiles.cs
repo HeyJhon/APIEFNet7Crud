@@ -10,6 +10,10 @@ namespace WebAPI.Utils
         {
             CreateMap<CustomerDTO, Customer>();
             CreateMap<CategoryDTO, Category>();
+            CreateMap<ProductDTO, Product>();
+            CreateMap<SellerDTO, Seller>();
+            CreateMap<SaleDTO, Sale>();
+            CreateMap<SaleDetailDTO, SaleDetail>();
 
         }
     }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace WebAPI.Models
 {
@@ -15,7 +16,7 @@ namespace WebAPI.Models
         public decimal Price{ get; set; }
         public int Stock { get; set; }
         public int CategoryId { get; set; }
+        [JsonIgnore]
         List<SaleDetail> Details { get; set; }
-
     }
 }

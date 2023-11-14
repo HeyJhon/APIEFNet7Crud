@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace WebAPI.Models
 {
@@ -14,6 +15,7 @@ namespace WebAPI.Models
         public int SellerId { get; set; }
         [Precision(18,2)]
         public decimal Total { get; set; }
+        [JsonIgnore]
         List<SaleDetail> Details { get; set; }
 
     }
